@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CreateMessage": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
