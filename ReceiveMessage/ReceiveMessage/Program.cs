@@ -36,8 +36,12 @@ ServiceBusReceivedMessage receivedMessage = await receiver.ReceiveMessageAsync()
 // get the message body as a string
 var body = receivedMessage.Body.ToString();
 Console.WriteLine(DateTime.UtcNow.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + " [DEBUG - message received] - " + body);
+
+var periodTimeSpan = TimeSpan.FromMinutes(1);
+Thread.Sleep(periodTimeSpan);
+
 await receiver.CompleteMessageAsync(receivedMessage);
-Console.WriteLine(DateTime.UtcNow.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + " [DEBUG - message completed]");
+Console.WriteLine(DateTime.UtcNow.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + " [DEBUG - message completed] - " + body);
 
 #endregion
 
@@ -51,7 +55,7 @@ Console.WriteLine(DateTime.UtcNow.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + " [DE
 //// get the message body as a string
 //var body = receivedMessage.Body.ToString();
 //Console.WriteLine(DateTime.UtcNow.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + " [DEBUG - message received] - " + body);
-//if (receivedMessage.Body.ToString().Contains("2"))
+//if (receivedMessage.Body.ToString().Contains("1"))
 //{
 //    await receiver.DeadLetterMessageAsync(receivedMessage);
 //    Console.WriteLine(DateTime.UtcNow.ToString("MM/dd/yyyy hh:mm:ss.fff tt") + " [DEBUG - message deadlettered]");

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WriteLog": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

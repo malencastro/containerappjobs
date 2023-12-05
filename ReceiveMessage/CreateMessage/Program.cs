@@ -24,7 +24,7 @@ namespace ConsoleApp1
             //await sender.SendMessageAsync(new ServiceBusMessage("This is a single message that we sent"));
 
             ServiceBusMessageBatch batch = await sender.CreateMessageBatchAsync();
-            for (var x = 0; x < 10; x++)
+            for (var x = 0; x < 1; x++)
             {
                 batch.TryAddMessage(new ServiceBusMessage($"This is message {x} that we sent"));
             }

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WriteLogAoTDotNet7": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
